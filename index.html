@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NHCube - Xem YouTube không quảng cáo</title>
+  <meta name="description" content="Công cụ xem YouTube không quảng cáo, không theo dõi">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fab fa-youtube"></i> NHCube Player</h1>
+      <p class="subtitle">Xem YouTube không quảng cáo • Tìm kiếm đa nguồn</p>
+    </header>
+
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Nhập từ khóa..." autocomplete="off" aria-label="Tìm kiếm video">
+      <button id="search-btn" aria-label="Tìm kiếm">
+        <i class="fas fa-search"></i> Tìm kiếm
+      </button>
+    </div>
+
+    <div id="video-container" class="hidden">
+      <div class="player-controls">
+        <button id="close-player" aria-label="Đóng video">
+          <i class="fas fa-times"></i>
+        </button>
+        <button id="fullscreen-btn" aria-label="Toàn màn hình">
+          <i class="fas fa-expand"></i>
+        </button>
+      </div>
+      <iframe 
+        id="video-player" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen
+        title="Trình phát video YouTube"
+      ></iframe>
+    </div>
+
+    <div id="search-results">
+      <div class="welcome-message">
+        <i class="fab fa-youtube"></i>
+        <p>Nhập từ khóa để bắt đầu tìm kiếm</p>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2023 NHCube - Công cụ phát triển bởi Invidious API</p>
+    </footer>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
